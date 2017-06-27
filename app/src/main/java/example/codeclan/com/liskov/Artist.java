@@ -14,12 +14,6 @@ class Artist {
   */
 
     public String drawShape(Shape shape) {
-        if(shape instanceof Square){
-            return "I'm drawing a square!";
-        } else if(shape instanceof Circle) {
-            return "I'm drawing a circle!";
-        }
-
-        return null;
+        return String.format("I'm drawing a %s!", shape.getClass().getSimpleName().toLowerCase());
     }
 }

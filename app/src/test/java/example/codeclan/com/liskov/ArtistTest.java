@@ -13,6 +13,7 @@ public class ArtistTest {
     Square square;
     Circle circle;
     Triangle triangle;
+    Trapezoid trapezoid;
 
     @Before
     public void before(){
@@ -20,6 +21,7 @@ public class ArtistTest {
         square = new Square();
         circle = new Circle();
         triangle = new Triangle();
+        trapezoid = new Trapezoid();
     }
 
     @Test
@@ -35,5 +37,10 @@ public class ArtistTest {
     @Test
     public void canDrawTriangle(){
         assertEquals("I'm drawing a triangle!", artist.drawShape(triangle));
+    }
+
+    @Test
+    public void canDrawTrapezoid(){
+        assertEquals("I'm drawing a trapezoid!", artist.drawShape(trapezoid));
     }
 }
